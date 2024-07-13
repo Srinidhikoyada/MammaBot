@@ -1,0 +1,52 @@
+{% load static %}
+<html>
+<head>
+<title>Mamabot Application</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><font color="f6e2e2" size=6>MamaBot: A System Based on ML and NLP for Supporting Women and Families during Pregnancy</font></h1>
+	   <marquee><em><font color="wheat" size=4>Pregancy 101: Everything You Need To Know For a Healthy And Happy Nine Months</font></em></marquee>
+    </div>
+    </div>
+  </div>
+  <div id="menu">
+    <ul>
+      <li><a href="{% url 'MyChatBot' %}">Home</a></li>
+      <li><a href="{% url 'User' %}">User</a></li>
+      <li><a href="{% url 'Register' %}">Register Here</a></li>
+       <li><a href="{% url 'facts' %}">facts</a></li>
+      <li><a href="{% url 'schedules' %}">schedules</a></li>
+      
+   </ul>
+  </div>
+  <div id="page">
+   <div id="content">
+      <div class="post">
+        <div class="title">
+          <h2><center><em><font color = "lavender">Hello from Baby Bliss Bot!!</em></h2>
+         </div>
+        <div class="entry">
+		 <br/><br/><br/>
+{{ data }}
+      <br>
+       <center><br/><font color = "wheat" font size = "5">About Chatbot</center></font></p>
+         <br> 
+<font color = "white" font size = "4.5"><p>Introducing MamaBot, your trusted companion throughout your pregnancy journey. Designed with care and precision, MamaBot provides expectant mothers with personalized support, valuable insights, and up-to-date information about their pregnancy. From answering questions about symptoms to offering tips on nutrition and wellness, MamaBot is here to guide you every step of the way. With its friendly interface and soothing pastel design, MamaBot ensures a comforting and engaging experience. Let MamaBot be your go-to resource, empowering you to enjoy a healthier and happier pregnancy.</p>
+</br>
+          </div>
+        
+      </div>
+     
+       
+       
+    </div>
+    
+  </div>
+
+</body>
+</html>

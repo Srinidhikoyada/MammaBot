@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Facts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #333;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .fact-display {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            min-width: 300px;
+            max-width: 80%;
+            animation: fadeInOut 10s infinite;
+            font-size: 1.5em;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .fact-display::before {
+            content: '';
+            background: url('https://www.iconfinder.com/data/icons/pregnancy-14/128/pregnancy-fetus-512.png') no-repeat center center;
+            background-size: 80px 80px;
+            position: absolute;
+            top: -50px;
+            width: 80px;
+            height: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.1;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; transform: translateY(20px); }
+            10%, 90% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .fact-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid rgba(0,0,0,0.75);
+            animation: typewriter 5s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
+        }
+
+        @keyframes blinkTextCursor {
+            from { border-right-color: rgba(0,0,0,0.75); }
+            to { border-right-color: transparent; }
+        }
+
+        .background-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .background-animation li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: float 20s infinite;
+            bottom: -150px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .background-animation li:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+            animation-duration: 10s;
+        }
+
+        .background-animation li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+
+        .background-animation li:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+            animation-duration: 8s;
+        }
+
+        .background-animation li:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+
+        .background-animation li:nth-child(5) {
+            left: 65%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+            animation-duration: 10s;
+        }
+
+        .background-animation li:nth-child(6) {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+            animation-duration: 12s;
+        }
+
+        .background-animation li:nth-child(7) {
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+            animation-duration: 14s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interesting Facts About Pregnancy</h1>
+        <p>Learn some amazing facts about pregnancy below!</p>
+    </header>
+    <div id="fact-display" class="fact-display"></div>
+    
+    <ul class="background-animation">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    
+    <script>
+        const facts = [
+            "Longest pregnancy: 375 days.",
+            "Babies recognize mom's voice.",
+            "Heightened sense of smell.",
+            "Heart starts at 6 weeks.",
+            "Uterus expands 500 times.",
+            "Cravings for non-food items.",
+            "Placenta is a unique organ.",
+            "Hair grows faster.",
+            "Morning sickness anytime.",
+            "Fingerprints form by 12 weeks.",
+            "Metallic taste in mouth.",
+            "Eyes open at 28 weeks.",
+            "Vivid dreams and nightmares.",
+            "Blood volume increases 50%.",
+            "Babies taste mom's food.",
+            "Skin pigmentation changes.",
+            "Babies practice breathing.",
+            "Higher risk of gum disease.",
+            "Brain develops at 3 weeks.",
+            "Feet may grow due to swelling."
+        ];
+
+        let factIndex = 0;
+        const factDisplay = document.getElementById('fact-display');
+
+        function showNextFact() {
+            factDisplay.innerHTML = `<p class="fact-text">${facts[factIndex]}</p>`;
+            factIndex = (factIndex + 1) % facts.length;
+        }
+
+        setInterval(showNextFact, 10000); // Change fact every 10 seconds
+        showNextFact(); // Show the first fact immediately
+    </script>
+</body>
+</html>
